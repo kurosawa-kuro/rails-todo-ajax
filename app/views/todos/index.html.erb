@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <div class="container flex-start">
+        <div class="col-box-1">
+            <h2>メモ一覧</h2>
+        </div>
+ 
+        <div class="col-box-3" id="todo-post">
+            <%= render "todos/form", todo_new: @todo_new %>
+        </div>
+     </div>
+ 
+    <div class="container flex-start" id="todo-list">
+        <%= render "todos/list", todos: @todos %>
+    </div>
+</div>

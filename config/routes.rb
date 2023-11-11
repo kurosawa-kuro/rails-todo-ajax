@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root :to => 'todos#index'
+  resources :todos, only: [:index, :update, :destroy, :create]
+  post 'ajax_todos_create', to: 'todos#ajax_create', as: 'ajax_todos_create'
 end

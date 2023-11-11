@@ -1,0 +1,8 @@
+<%= form_with model: todo_new, url: ajax_todos_create_path, local: false, method: :post do |f| %>
+    <div class="todo-header">
+        <%= f.text_field :title, placeholder: "タイトル", class: "form-box" %>
+    </div>
+    <div class="todo-footer">
+        <%= f.submit "作成", class: "btn" %>
+    </div>
+<% end %>
